@@ -1,0 +1,90 @@
+{
+  "config": {
+    "configFile": "C:\\Playwright Workspace\\playwright-js-july\\playwright.config.ts",
+    "rootDir": "C:/Playwright Workspace/playwright-js-july/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Playwright Workspace\\playwright-js-july\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Playwright Workspace/playwright-js-july/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Playwright Workspace/playwright-js-july/tests",
+        "testIgnore": [
+          "**/e2e/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.45.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: Playwright Test did not expect test.afterEach() to be called here.\nMost common reasons include:\n- You are calling test.afterEach() in a configuration file.\n- You are calling test.afterEach() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.",
+      "stack": "Error: Playwright Test did not expect test.afterEach() to be called here.\nMost common reasons include:\n- You are calling test.afterEach() in a configuration file.\n- You are calling test.afterEach() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n    at Object.<anonymous> (C:\\Playwright Workspace\\playwright-js-july\\global-setup.ts:6:6)",
+      "location": {
+        "file": "C:\\Playwright Workspace\\playwright-js-july\\global-setup.ts",
+        "column": 6,
+        "line": 6
+      },
+      "snippet": "\u001b[90m   at \u001b[39m..\\global-setup.ts:6\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m \u001b[90m// This hook will run after each test\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m test\u001b[33m.\u001b[39mafterEach(\u001b[36masync\u001b[39m ({}\u001b[33m,\u001b[39m testInfo) \u001b[33m=>\u001b[39m {\n \u001b[90m   |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m videoPath \u001b[33m=\u001b[39m testInfo\u001b[33m.\u001b[39mattachments\u001b[33m.\u001b[39mfind(attachment \u001b[33m=>\u001b[39m attachment\u001b[33m.\u001b[39mname \u001b[33m===\u001b[39m \u001b[32m'video'\u001b[39m)\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mpath\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   \u001b[36mif\u001b[39m (videoPath) {\n \u001b[90m 9 |\u001b[39m     \u001b[90m// Define the custom directory where videos will be saved\u001b[39m\u001b[0m"
+    }
+  ],
+  "stats": {
+    "startTime": "2024-09-01T09:36:56.996Z",
+    "duration": 22.153999999999996,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
